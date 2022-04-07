@@ -189,142 +189,11 @@ function float(obj) {
 		//console.log(obj.style.top);
 	}
 }</script>
-		once2();
-		once2 = function(){};
-		once3();
-		once3 = function(){};
-	}
-	//if(getScrollTop() + getWindowHeight() > 3700){
-	//	once3();
-	//	once3 = function(){};
-	//}
-}
-
-function once2(){
-	setTimeout(function(){
-		move(document.getElementById("d21"));
-	}, 100);
-	setTimeout(function(){
-		move(document.getElementById("d22"));
-	}, 100);
-	setTimeout(function(){
-		move(document.getElementById("d23"));
-	}, 800 * 2 - 700);
-	setTimeout(function(){
-		move(document.getElementById("d24"));
-	}, 800 * 2 - 700);
-	setTimeout(function(){
-		move(document.getElementById("d25"));
-	}, 800 * 3 - 700);
-	setTimeout(function(){
-		move(document.getElementById("d26"));
-	}, 800 * 3 - 700);
-}
-
-function once3(){
-	for(i = 27; i <= 43; i++){
-		var obj = document.getElementById("d" + i);
-		obj.style.display = "block";
-	}
-}
-
-function getScrollTop() {
-	var scrollTop = window.pageYOffset
-		|| document.documentElement.scrollTop
-		|| document.body.scrollTop
-		|| 0;
-	return scrollTop;
-}
-
-function getWindowHeight(){
-	return document.compatMode == "CSS1Compat" ? windowHeight = document.documentElement.clientHeight : windowHeight = document.body.clientHeight;
-}
-
-function move(obj) {
-	//console.log(obj);
-	obj.style.zoom = "50%";
-	//obj.style.left = "-120px";
-	obj.style.left = obj.offsetLeft - 90 + "px";
-	obj.style.display = "block";
-
-	let start = Date.now();
-	let timer = setInterval(function(){
-		let timePassed = Date.now() - start;
-		if(draw(timePassed) == true){
-			clearInterval(timer);
-			return;
-		}
-	}, 5);
-
-	function draw(timePassed){
-		if(Math.abs(parseInt(obj.style.left) - 0) > 3)
-			obj.style.left = parseInt(obj.style.left) + timePassed / 20 + 'px';
-		else 
-			return true;
-		if(parseInt(obj.style.zoom) < 100)
-			obj.style.zoom = parseInt(obj.style.zoom) + timePassed / 20 + '%';
-		else 
-			return true;
-		//console.log(obj.style.left + " " + obj.style.zoom);
-	}
-}
-
-function move2(obj) {
-	obj.style.zoom = "50%";
-	//obj.style.left = "-120px";
-	obj.style.left = obj.offsetLeft - 120 + "px";
-	obj.style.display = "block";
-
-	let start = Date.now();
-	let timer = setInterval(function(){
-		let timePassed = Date.now() - start;
-		if(draw(timePassed) == true){
-			clearInterval(timer);
-			return;
-		}
-	}, 5);
-
-	function draw(timePassed){
-		//if(Math.abs(parseInt(obj.style.left) - 0) > 3)
-		//	obj.style.left = parseInt(obj.style.left) + timePassed / 160 + 'px';
-		//else 
-		//	return true;
-		obj.style.left = parseInt(obj.style.left) + timePassed / 160 + 'px';
-		if(parseInt(obj.style.zoom) < 100)
-			obj.style.zoom = parseInt(obj.style.zoom) + timePassed / 160 + '%';
-		else 
-			return true;
-		//console.log(obj.style.left + " " + obj.style.zoom);
-	}
-}
-
-function float(obj) {
-	obj.style.top = obj.offsetTop + 120 + "px";
-	obj.style.display = "block";
-
-	let start = Date.now();
-	let timer = setInterval(function(){
-		let timePassed = Date.now() - start;
-		if(draw(timePassed) == true){
-			clearInterval(timer);
-			return;
-		}
-	}, 5);
-
-	function draw(timePassed){
-		if(Math.abs(parseInt(obj.style.top) - 0) > 3){
-			obj.style.top = parseInt(obj.style.top) - (timePassed / 160) + 'px';
-			//console.log(timePassed);
-		}
-		else
-			return true;
-		//console.log(obj.style.top);
-	}
-}
-	</script>
 	<style>html, body {
     margin: 0px;
     height: 100%;
+    background-image: url("https://pre.ih5.cn/v3/files/4287865/19089/mPKoJy3e.png");
+    background-color: #FDD44D;
 }
 
 img {
@@ -333,7 +202,6 @@ img {
 }
 
 .container {
-    background: url("https://pre.ih5.cn/v3/files/4287865/19089/mPKoJy3e.png");
     width: 100%;
     height: 11300px;
     position: absolute;
