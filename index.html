@@ -3,20 +3,8 @@
 	<meta name="viewport" content="width=640,user-scalable=no">
 	<meta name="format-detection" content="telephone=no">
     <script src="./js/ppt.js"></script>
-    <script>window.onload=function() {
-	//var x1 = document.getElementById("d21");
-	//var x2 = document.getElementById("d22");
-	//var x3 = document.getElementById("d23");
-	//var x4 = document.getElementById("d24");
-	//var x5 = document.getElementById("d25");
-	//var x6 = document.getElementById("d26");
-	//x1.style.display = "block";
-	//x2.style.display = "block";
-	//x3.style.display = "block";
-	//x4.style.display = "block";
-	//x5.style.display = "block";
-	//x6.style.display = "block";
-	
+    <script>
+        window.onload=function() {
 	setTimeout(function(){
 		move(document.getElementById("d1"));
 	}, 300);
@@ -48,9 +36,6 @@
 		move(document.getElementById("d13"));
 	}, 300 * 6);
 	setTimeout(function(){
-		move(document.getElementById("d12"));
-	}, 300 * 6);
-	setTimeout(function(){
 		move(document.getElementById("d10"));
 	}, 300 * 6);
 	setTimeout(function(){
@@ -73,10 +58,6 @@ window.onscroll = function() {
 		once2();
 		once2 = function(){};
 	}
-	//if(getScrollTop() + getWindowHeight() > 3700){
-	//	once3();
-	//	once3 = function(){};
-	//}
 }
 
 function once2(){
@@ -85,26 +66,26 @@ function once2(){
 	}, 100);
 	setTimeout(function(){
 		fadeIn("d23");
-	}, 900);
+	}, 600);
 	setTimeout(function(){
 		fadeIn("d24");
-	}, 900);
+	}, 600);
 	setTimeout(function(){
 		fadeIn("d22");
-	}, 1700);
+	}, 1100);
 	setTimeout(function(){
 		fadeIn("d25");
-	}, 2600);
+	}, 1700);
 	setTimeout(function(){
 		fadeIn("d26");
-	}, 2600);
+	}, 1700);
 	setTimeout(function(){
 		fadeIn("d27");
-	}, 3400);
+	}, 2300);
 	for(i = 28; i <= 43; i++){
 		(function(j){
 			setTimeout(function(){
-				fadeIn("d" + j);}, 4200
+				fadeIn("d" + j);}, 2900
 			);
 		})(i);
 	}
@@ -118,9 +99,8 @@ function fadeIn(obj) {
 
 	var styleSheets = document.styleSheets[0];
 	var index = styleSheets.length;
-	console.log("#" + obj + "{ animation: fadeIn 800ms linear 1 forwards; }");
 	styleSheets.insertRule(
-		"#" + obj + "{ animation: fadeIn 800ms linear 1 forwards; }", 0);
+		"#" + obj + "{ animation: fadeIn 300ms linear 1 forwards; }", 0);
 }
 
 function getScrollTop() {
@@ -215,7 +195,8 @@ function float(obj) {
 			return true;
 		//console.log(obj.style.top);
 	}
-}</script>
+}
+    </script>
 	<style>
         html, body {
             margin: 0px;
@@ -323,7 +304,7 @@ function float(obj) {
     <div class="container">
 
         <img id="d1"  src="https://pre.ih5.cn/v3/files/4287865/19089/VVNpHIJm.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.789737, 0, 0, 0.788136, 4.15966, 56.4706);">
-        <img id="d2"  src="https://pre.ih5.cn/v3/files/4287865/19089/87YYwuwK.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.790989, 0, 0, 0.793103, 3, 30);">
+        <img id="d2"  src="https://pre.ih5.cn/v3/files/4287865/19090/L3AKgXOd.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.799499, 0, 0, 0.802469, -1, 65);">
         <img id="d3"  src="https://pre.ih5.cn/v3/files/4287865/19088/riQNW6uL.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.223529, 0, 0, 0.220339, 475.16, 101.471);">
         <img id="d4"  src="https://pre.ih5.cn/v3/files/4287865/19088/LPGaymIN.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.585799, 0, 0, 0.584631, 1.15966, 312.471);">
         <img id="d5"  src="https://pre.ih5.cn/v3/files/4287865/19088/KwMT1VPB.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.765376, 0, 0, 0.765835, 299.16, 295.471);">
@@ -332,17 +313,17 @@ function float(obj) {
         <img id="d8"  src="https://pre.ih5.cn/v3/files/4287865/19088/UNdJjXwy.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.229698, 0, 0, 0.227979, 32.1597, 787.471);">
         <img id="d9"  src="https://pre.ih5.cn/v3/files/4287865/19088/IumRBpd6.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.473373, 0, 0, 0.474093, -7.84034, 318.471);">
         <img id="d10" src="https://pre.ih5.cn/v3/files/4287865/19088/V1SXuu8S.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.11838, 0, 0, 0.117504, 220.16, 322.471);">
-        <img id="d11" src="https://pre.ih5.cn/v3/files/4287865/19088/GrKFjl4U.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.28271, 0, 0, 0.28201, 275.16, 322.471);">
-        <img id="d12" src="https://pre.ih5.cn/v3/files/4287865/19088/4qPJXNGG.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.16771, 0, 0, 0.167816, 503.16, 295.471);">
+        <img id="d11" src="https://pre.ih5.cn/v3/files/4287865/19088/GrKFjl4U.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.28271, 0, 0, 0.28201, 285, 310);">
+        
         <img id="d13" src="https://pre.ih5.cn/v3/files/4287865/19088/3mA3sqPk.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.494305, 0, 0, 0.494845, 363.16, 472.471);">
-        <img id="d14" src="https://pre.ih5.cn/v3/files/4287865/19088/kq9A4Dhf.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.744875, 0, 0, 0.747634, 310.16, 654.471);">
+        <img id="d14" src="https://pre.ih5.cn/v3/files/4287865/19090/afy01mGY.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.456821, 0, 0, 0.458484, 291, 650);">
         <img id="d15" src="https://pre.ih5.cn/v3/files/4287865/19088/gJpzIIm1.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.829787, 0, 0, 0.831461, -1.66667, 898.667);">
         <img id="d16" src="https://pre.ih5.cn/v3/files/4287865/19089/qM99yG2N.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.836045, 0, 0, 0.835909, -13, 1005);">
         <img id="d21" class="left1" src="https://pre.ih5.cn/v3/files/4287865/19088/MjR3uumB.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.826772, 0, 0, 0.825688, 2.83333, 2914.17);">
         <img id="d24" class="left2" src="https://pre.ih5.cn/v3/files/4287865/19088/RkmVmmf0.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.389237, 0, 0, 0.389273, 292, 2892);">
         <img id="d23" class="left2" src="https://pre.ih5.cn/v3/files/4287865/19088/BrUgv1pm.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.212617, 0, 0, 0.213128, 26, 2906);">
         <img id="d22" class="right1" src="https://pre.ih5.cn/v3/files/4287865/19088/YnMTSvHy.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.825459, 0, 0, 0.824873, 4.83333, 3127.17);">
-        <img id="d26" class="right2" src="https://pre.ih5.cn/v3/files/4287865/19088/D07uyWqA.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.461827, 0, 0, 0.462687, -14.1667, 3188.17);">
+        <img id="d26" class="right2" src="https://pre.ih5.cn/v3/files/4287865/19090/UVRdn6ZN.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.445557, 0, 0, 0.445848, -9, 3192);">
         <img id="d25" class="right2" src="https://pre.ih5.cn/v3/files/4287865/19088/xrqAJAnR.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.28271, 0, 0, 0.28201, 269.833, 3089.17);">
         <img id="d27" src="https://pre.ih5.cn/v3/files/4287865/19088/RX4HfTd9.png" style="position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.81602, 0, 0, 0.815126, 1, 3530);">
         <img id="d28" src="https://pre.ih5.cn/v3/files/4287865/19088/p2UxVIHe.png" style="z-index: 2; position: absolute; transform-origin: 0% 0% 0px; transform: translate3d(0%, 0%, 0px) matrix(0.812265, 0, 0, 0.809302, -9, 3709);">
