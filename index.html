@@ -118,7 +118,7 @@ function fadeIn(obj) {
 	var styleSheets = document.styleSheets[0];
 	var index = styleSheets.length;
 	styleSheets.insertRule(
-		"#" + obj + "{ animation: fadeIn 300ms linear 1 forwards; }", 0);
+		"#" + obj + "{ animation: fadeIn 150ms linear 1 forwards; }", 0);
 }
 
 function getScrollTop() {
@@ -257,8 +257,8 @@ function float(obj) {
         @keyframes travel_from_left {
             from{
                 transform: scale(0.085);
-                left: 160px;
-                top: 230px;
+                left: 0;
+                top: 0;
             }
             to {
                 transform: scale(0.15);
