@@ -5,6 +5,29 @@
     <script src="./js/ppt.js"></script>
     <script>
         window.onload=function() {
+	//setTimeout(function(){
+	//	move2("d1");
+	//}, 300);
+	//setTimeout(function(){
+	//	move2("d2");
+	//}, 300 * 2);
+	//setTimeout(function(){
+	//	move2("d3");
+	//}, 300 * 2);
+	//setTimeout(function(){
+	//	move2("d4");
+	//}, 300 * 3);
+	//setTimeout(function(){
+	//	move2("d7");
+	//}, 300 * 3);
+	//setTimeout(function(){
+	//	move2("d9");
+	//}, 300 * 3);
+	//setTimeout(function(){
+	//	move2("d8");
+	//}, 300 * 4);
+
+
 	setTimeout(function(){
 		move(document.getElementById("d1"));
 	}, 300);
@@ -30,7 +53,8 @@
 		move(document.getElementById("d5"));
 	}, 300 * 5);
 	setTimeout(function(){
-		move(document.getElementById("d10"));
+		//move(document.getElementById("d10"));
+		move2("d10");
 	}, 300 * 6);
 	setTimeout(function(){
 		move(document.getElementById("d6"));
@@ -138,32 +162,15 @@ function move(obj) {
 	}
 }
 
-function move2(obj) {
-	obj.style.zoom = "50%";
-	//obj.style.left = "-120px";
-	obj.style.left = obj.offsetLeft - 120 + "px";
-	obj.style.display = "block";
-
-	let start = Date.now();
-	let timer = setInterval(function(){
-		let timePassed = Date.now() - start;
-		if(draw(timePassed) == true){
-			clearInterval(timer);
-			return;
-		}
-	}, 5);
-
-	function draw(timePassed){
-		//if(Math.abs(parseInt(obj.style.left) - 0) > 3)
-		//	obj.style.left = parseInt(obj.style.left) + timePassed / 160 + 'px';
-		//else 
-		//	return true;
-		obj.style.left = parseInt(obj.style.left) + timePassed / 160 + 'px';
-		if(parseInt(obj.style.zoom) < 100)
-			obj.style.zoom = parseInt(obj.style.zoom) + timePassed / 160 + '%';
-		else 
-			return true;
-		//console.log(obj.style.left + " " + obj.style.zoom);
+function move2(obj)
+{
+	var x = document.getElementById(obj);
+	var styleSheets = document.styleSheets[0];
+	var index = styleSheets.length;
+	styleSheets.insertRule(
+		"#" + obj + "{ animation: travel_from_left 300ms linear 1 forwards; }", 0);
+	if(x.style){
+		x.style.display = "block";
 	}
 }
 
@@ -248,24 +255,15 @@ function float(obj) {
         }
 
         @keyframes travel_from_left {
-            20% {
-                transform: translate3d(10px, 0, 0);
+            from{
+                transform: scale(0.085);
+                left: 160px;
+                top: 230px;
             }
-
-            40% {
-                transform: translate3d(20px, 0, 0);
-            }
-
-            60% {
-                transform: translate3d(30px, 0, 0);
-            }
-
-            80% {
-                transform: translate3d(40px, 0, 0);
-            }
-
-            100% {
-                transform: translate3d(50px, 0, 0);
+            to {
+                transform: scale(0.15);
+                left: 240px;
+                top: 310px;
             }
         }
 
