@@ -4,14 +4,10 @@
 	<meta name="format-detection" content="telephone=no">
     <script>
     window.onload = function(){
-    window.onmousewheel=function(){
-        return false;
-    }
+    document.body.style.overflow='hidden';
     window.onclick = function() {
         fadeOut("top1");
-        window.onmousewheel=function(){
-            return true;
-        }
+        document.body.style.overflow='visible';
         setTimeout(function(){
             fadeIn("con1");
         }, 1300);
