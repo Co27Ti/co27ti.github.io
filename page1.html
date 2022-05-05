@@ -2,37 +2,44 @@
 <head>
 	<meta name="viewport" content="width=640,user-scalable=no">
 	<meta name="format-detection" content="telephone=no">
-    <script>
-    window.onload = function(){
-    document.body.style.overflow='hidden';
-    window.onclick = function() {
-        fadeOut("top1");
-        document.body.style.overflow='visible';
-        //setTimeout(function(){
-        //    fadeIn("con1");
-        //}, 1300);
+    <script>window.onload = function(){
+        document.body.style.overflow='hidden';
+    
+        var con = document.getElementsByClassName("container")[0];
+        var top = document.getElementsByClassName("topic")[0];
+        
+        var img = con.firstElementChild;
+        img.onload = function() {
+            
+        }    
+    
+        window.onclick = function() {
+            fadeOut("top1");
+            con.style.display = "block";
+            document.body.style.overflow='visible';
+            //setTimeout(function(){
+            //    fadeIn("con1");
+            //}, 1300);
+        }
     }
-}
-
-function fadeIn(obj) {
-    var x = document.getElementById(obj);
-
-    var styleSheets = document.styleSheets[0];
-    var index = styleSheets.length;
-    styleSheets.insertRule(
-        "#" + obj + "{ animation: fadeIn 2000ms linear 1 forwards; }", 0);
-}
-
-function fadeOut(obj) {
-    var x = document.getElementById(obj);
-
-    var styleSheets = document.styleSheets[0];
-    var index = styleSheets.length;
-    styleSheets.insertRule(
-        "#" + obj + "{ animation: fadeOut 2000ms linear 1 forwards; }", 0);
-}
-
-</script>
+    
+    function fadeIn(obj) {
+        var x = document.getElementById(obj);
+    
+        var styleSheets = document.styleSheets[0];
+        var index = styleSheets.length;
+        styleSheets.insertRule(
+            "#" + obj + "{ animation: fadeIn 2000ms linear 1 forwards; }", 0);
+    }
+    
+    function fadeOut(obj) {
+        var x = document.getElementById(obj);
+    
+        var styleSheets = document.styleSheets[0];
+        var index = styleSheets.length;
+        styleSheets.insertRule(
+            "#" + obj + "{ animation: fadeOut 2000ms linear 1 forwards; }", 0);
+    }</script>
     <style>
 html, body {
     margin: 0px;
@@ -48,6 +55,7 @@ html, body {
     
     .container{
         opacity: 1;
+        display: none;
     }
     
     @keyframes fadeIn{
